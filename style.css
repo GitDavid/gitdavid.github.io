@@ -1,13 +1,36 @@
+:root {
+    --section-width: 50%;
+}
+
 body {
     display: flex;
     flex-direction: column;
-    width: 600px;
     justify-content: space-between;
-    text-align: center;
+    align-items: center;
 }
 
 nav {
     display: flex;
+    width: var(--section-width);
     justify-content: space-evenly;
-    position: fixed;
+    padding: 2em;
+}
+
+nav > div {
+    font-size: 2em;
+}
+
+section {
+    width: var(--section-width);
+}
+
+section#projects {
+    display: grid;
+    grid-gap: 0.2rem;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: minmax(20vh, 200px);
+}
+
+.projectbox {
+    background-color: gray;
 }
